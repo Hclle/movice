@@ -1,0 +1,243 @@
+/* 会员中心 */
+.setting {
+	margin: 0 auto;
+	margin-top: 80px;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+/* 左侧 */
+.setting .s-left {
+	flex: 2;
+	border-right: 1px solid rgba(50, 50, 50, 0.25);
+	text-align: center;
+	color: #333;
+
+}
+
+/* 标题 */
+.setting .s-left .s-title {
+	display: block;
+	font-size: 28px;
+	margin-bottom: 50px;
+}
+
+/* 选项 */
+.setting .s-left a {
+	display: block;
+	margin-bottom: 15px;
+	color: #666;
+	font-size: 18px;
+}
+
+.setting .s-left a:hover {
+	color: black;
+}
+
+/* 选中状态 */
+#active {
+	color: black;
+}
+
+/* 右侧 */
+.setting .s-right {
+	flex: 8;
+	padding-left: 60px;
+}
+
+/* 每一行 */
+.setting .s-right .s-item {
+	width: 100%;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+/* 头像 */
+.setting .s-right .s-item .s-head {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	margin-right: 20px;
+}
+
+.setting .s-right .s-item .s-head img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	top: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.setting .s-right .s-item .s-head a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	top: 0;
+	position: absolute;
+	z-index: 2;
+	background: rgba(0, 0, 0, .5);
+	opacity: 0;
+	text-align: center;
+	line-height: calc(100px + 35% * 2);
+	outline: none;
+}
+
+/* 动画 */
+@keyframes mymove {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/* 上传图标 */
+.setting .s-right .s-item .s-head a:hover {
+	animation: mymove .5s infinite;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.setting .s-right .s-item .s-head a .icon {
+	width: 35%;
+	height: 35%;
+	fill: white;
+}
+
+/* 个人信息 */
+.setting .s-right .s-item .s-info {
+	padding-top: 3%;
+}
+
+.setting .s-right .s-item .s-info p {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.setting .s-right .s-item .s-info p span {
+	color: #666;
+	font-size: 14px;
+}
+
+/* 更改信息 */
+.setting .s-right .s-item .s-item-title {
+	display: flex;
+	width: 100%;
+}
+
+.setting .s-right .s-item .s-item-title div {
+	flex: 5;
+}
+
+/* 编辑框 */
+.setting .s-right .s-item .s-item-title .form-item {
+	height: 48px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.setting .s-right .s-item .s-item-title .form-item input {
+	border: 1px solid #888;
+	border-radius: 5px;
+	width: 90%;
+	height: 100%;
+	outline: none;
+	padding-left: 10px;
+	font-size: 16px;
+	color: #666;
+}
+
+/* 取消日期框调节器 */
+.setting .s-right .s-item .s-item-title .form-item input::-webkit-inner-spin-button {
+	display: none;
+}
+
+/* 性别选择 */
+.setting .s-right .s-item .s-item-title .form-item input[type="radio"] {
+	width: 15%;
+	height: 50%;
+	margin-left: 5%;
+}
+
+.setting .s-right .s-item label {
+	color: #666;
+	font-size: 22px;
+}
+
+/* 确认按钮 */
+.setting .s-right .s-item .btn {
+	width: 30%;
+	display: flex;
+	height: 40px;
+	border-radius: 8px;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
+	border: 1px solid #ff4848;
+	background-color: #ff4848;
+	color: white;
+	margin: 0 auto;
+}
+
+/* 错误 */
+.error {
+	border: 2px solid red !important;
+}
+
+.error::-webkit-input-placeholder {
+	color: red !important;
+}
+
+/* 响应式 */
+
+@media screen and (max-width: 768px) {
+
+	/* 会员中心 */
+	.setting {
+		display: block;
+		padding: 0px;
+	}
+
+	/* 左侧 */
+	.setting .s-left {
+		width: 100%;
+		border: none;
+		flex: none;
+	}
+
+	/* 左侧菜单列表 */
+	.setting .s-left .s-list {
+		width: 100%;
+		border-bottom: 1px solid #888;
+		margin-bottom: 10px;
+	}
+
+	/* 左侧菜单列表标题 */
+	.setting .s-left .s-title {
+		margin-bottom: 10px;
+	}
+
+	/* 右侧 */
+	.setting .s-right {
+		width: 100%;
+		padding: 0;
+	}
+
+	/* 选择框字体 */
+	.setting .s-right .s-item label {
+		font-size: 15px;
+	}
+
+	/* 评论记录 */
+	.setting .s-right .page {
+		width: 100%;
+	}
+}

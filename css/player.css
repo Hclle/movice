@@ -1,0 +1,234 @@
+/* 播放 */
+.player {
+	margin: 0 auto;
+	margin-top: 80px;
+	width: 80%;
+}
+
+.player .p-item {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+/* 播放器 */
+.player.p-item #dplayer {}
+
+/* 视频信息 */
+.player .p-item .p-info {
+	float: right;
+	display: inline-block;
+	height: 100%;
+	width: 28%;
+	margin-left: 1%;
+	border: 1px solid rgba(50, 50, 50, 0.25);
+	border-radius: 5px;
+}
+
+/* 影片介绍 */
+.player .p-item .p-info .p-title {
+	color: #666;
+}
+
+.player .p-item .p-info .table p,
+.player .p-item .p-info .p-title {
+	padding: 3%;
+}
+
+/* 影片信息 */
+.player .p-item .p-info .table table {
+	margin: 0 auto;
+	width: 95%;
+	height: 80%;
+	border-collapse: collapse;
+	color: #333;
+}
+
+.player .p-item .p-info .table table th,
+.table table td {
+	border-bottom: 1px solid rgba(50, 50, 50, 0.25);
+}
+
+.player .p-item .p-info .table table td {
+	padding: 3%;
+}
+
+/* 标题 */
+.player .p-item .p-info .table table .p-t-title {
+	width: 30%;
+	color: #888;
+}
+
+/* 评分和收藏 */
+.player .p-item .ops {
+	width: 50%;
+	height: 30px;
+	display: flex;
+}
+
+.player .p-item .ops a {
+	display: flex;
+	height: 100%;
+	width: 25%;
+	align-items: center;
+	color: #666;
+}
+
+.player .p-item .ops a .icon {
+	width: 50%;
+	height: 100%;
+	fill: #888;
+}
+
+.player .p-item .ops a:hover {
+	color: black;
+	fill: aqua;
+}
+
+.player .p-item .ops a:hover>.icon {
+	fill: #ff4848;
+}
+
+/* 评论数量 */
+.player .p-item .c-num {
+	margin: 5% 0 3% 0;
+	padding-top: 1%;
+}
+
+.player .p-item .c-num h2 {
+	color: #666;
+}
+
+.player .p-item .c-num h2 span {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/* 评论输入区域 */
+.player .p-item .c-textarea {
+	width: 70%;
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1%;
+}
+
+/* 评论内容 */
+.player .p-item .c-textarea #c-textarea {
+	width: 89%;
+	outline: none;
+	border: 1px solid #888;
+	padding: 1%;
+	color: #666;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+/* 发送评论 */
+.player .p-item .c-textarea .c-send {
+	display: block;
+	width: 10%;
+	height: 100%;
+	line-height: 70px;
+	border: 1px solid #ff4848;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #ff4848;
+	color: white;
+}
+
+/* 评论列表 */
+.player .p-item .c-list {
+	width: 70%;
+}
+
+/* 每一条评论 */
+.player .p-item .c-list .c-item {
+	width: 100%;
+	display: flex;
+	padding: 3% 0;
+	border-bottom: 1px solid rgba(50, 50, 50, 0.25);
+	color: #666;
+}
+
+/* 头像 */
+.player .p-item .c-list .c-item .c-left {}
+
+.player .p-item .c-list .c-item .c-left .c-head {
+	display: block;
+	width: 70px;
+	height: 70px;
+	border-radius: 50px;
+	margin: 0 auto;
+}
+
+/* 评论主体信息 */
+.player .p-item .c-list .c-item .c-right {
+	padding-left: 3%;
+	width: 100%;
+}
+
+.player .p-item .c-list .c-item .c-right .c-info {
+	display: flex;
+	margin-bottom: 1%;
+	width: 50%;
+	justify-content: space-between;
+}
+
+/* 昵称 */
+.player .p-item .c-list .c-item .c-right .c-info .c-name {
+	font-size: 20px;
+}
+
+/* 时间 */
+.player .p-item .c-list .c-item .c-right .c-info .c-time {
+	color: #888;
+}
+
+/* 取消分页器下边框 */
+.player .p-item .c-list .c-item:nth-last-child(1) {
+	border: none;
+	padding-bottom: 0;
+}
+
+/* 响应式 */
+
+@media screen and (max-width: 768px) {
+	.player .p-item .p-info {
+		float: none;
+		width: 100%;
+	}
+
+	/* 点赞 */
+	.player .p-item .ops {
+		width: 100%;
+	}
+
+	/* 评论输入区域 */
+	.player .p-item .c-textarea {
+		width: 100%;
+	}
+
+	/* 评论内容 */
+	.player .p-item .c-textarea #c-textarea {
+		width: 79%;
+	}
+
+	/* 发送评论 */
+	.player .p-item .c-textarea .c-send {
+		width: 20%;
+	}
+
+	/* 评论列表 */
+	.player .p-item .c-list {
+		width: 100%;
+	}
+
+	.player .p-item .c-list .c-item .c-right .c-info {
+		width: 100%;
+	}
+
+	/* 分页器 */
+	.player .p-item .c-list .page {
+		width: 100%;
+	}
+}

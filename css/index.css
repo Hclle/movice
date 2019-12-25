@@ -1,0 +1,106 @@
+/* 轮播图 */
+.swiper-container {
+	margin-top: 80px;
+	width: 80%;
+	height: calc((100vh - 80px) / 1.4);
+	border-radius: 5px;
+}
+
+/* 上一张下一章按钮 */
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+	outline: none;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+
+/* 推荐列表 */
+.move-list {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 1%;
+}
+
+/* 推荐列表标题 */
+.move-list .m-title {
+	font-size: 24px;
+	font-weight: 400;
+}
+
+/* 推荐列表组 */
+.move-list .m-items {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: wrap;
+}
+
+/* 推荐列表单独块 */
+.move-list .m-items .m-item {
+	text-align: center;
+	width: 15%;
+	height: 100%;
+	margin-bottom: 5px;
+}
+
+.move-list .m-items .m-item:hover {
+	border: 1px solid rgba(50, 50, 50, 0.25);
+	border-radius: 5px;
+}
+
+/* 推荐列表单独块封面 */
+.move-list .m-items .m-item a {
+	display: block;
+}
+
+.move-list .m-items .m-item .m-img,
+.m-item-title {
+	display: block;
+	overflow: hidden;
+	color: #000;
+}
+
+/* 推荐列表单独块封面 */
+.move-list .m-items .m-item .m-img {
+	width: 100%;
+	height: 80%;
+}
+
+/* 推荐列表单独块标题 */
+.move-list .m-items .m-item .m-item-title {
+	margin: 5px 0;
+}
+
+.move-list .m-items .m-item .m-item-title:hover {
+	color: red;
+}
+
+.move-list .m-items .m-item .m-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.move-list .m-items .m-item p {
+	font-size: 14px;
+	color: #666;
+}
+
+/* 响应式 */
+
+@media screen and (max-width: 768px) {
+
+	/* 轮播图 */
+	.swiper-container {
+		height: calc((100vh - 80px) / 3);
+	}
+
+	/* 推荐列表单独块 */
+	.move-list .m-items .m-item {
+		width: 48%;
+
+	}
+}

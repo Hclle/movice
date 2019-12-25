@@ -1,0 +1,202 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* 导航栏 */
+header {
+	width: 100%;
+	height: 70px;
+	box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.25);
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	background-color: #fff;
+}
+
+header .container {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .container .logo a {
+	color: #777;
+	font-size: 80%;
+}
+
+/* 导航栏 搜索 */
+header .container .search {
+	width: 30%;
+	height: 50%;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	display: flex;
+}
+
+header .container .search input {
+	border: none;
+	outline: none;
+	height: 100%;
+	width: 70%;
+	padding-left: 5px;
+}
+
+header .container .search a {
+	height: 100%;
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left: 1px solid #ccc;
+	font-size: 50%;
+}
+
+header .container .search a:hover {
+	background-color: #eee;
+}
+
+header .container .search a .icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+/* 导航栏 工具 */
+header .container .tools {
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .container .tools a {
+	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	color: #666;
+}
+
+header .container .tools a:hover {
+	color: #000;
+}
+
+header .container .tools a:hover .icon path {
+	fill: #000;
+}
+
+header .container .tools a .icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+header .container .tools a .icon path {
+	fill: #666;
+}
+
+/* 移动端菜单 */
+header .container .menu input:checked+.menuBox {
+	display: block;
+}
+
+header .container .menu .icon {
+	width: 28px;
+	height: 28px;
+	fill: #666;
+	display: none;
+	border: 1px solid #888;
+	border-radius: 2px;
+}
+
+header .container .menu #menu {
+	display: none;
+}
+
+header .container .menu .menuBox {
+	width: 100%;
+	background-color: white;
+	position: fixed;
+	top: 70px;
+	left: 0px;
+	display: none;
+	padding: 1% 10%;
+	box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.25);
+}
+
+/* 提示框 */
+.toast {
+	position: fixed;
+	width: 50%;
+	padding: 2% 0;
+	left: 25%;
+	top: 48%;
+	background-color: white;
+	border: 1px solid rgba(50, 50, 50, 0.25);
+	border-radius: 10px;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	opacity: 0;
+}
+
+/* 页脚 */
+footer {
+	width: 100%;
+	/* height: 100px; */
+	margin-top: 5%;
+	background-color: white;
+}
+
+footer .footer {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	color: #666;
+}
+
+/* 响应式 */
+
+@media screen and (max-width: 768px) {
+
+	/* 工具栏和搜索栏 */
+	header .container .tools,
+	header .container .search {
+		display: none;
+	}
+
+	/* 菜单 */
+	header .container .menu .icon {
+		display: block;
+	}
+
+	/* 移动端工具栏和搜索栏 */
+	header .container .menu .menuBox .search,
+	header .container .menu .menuBox .tools {
+		display: flex;
+		width: 100%;
+		height: 30px;
+	}
+
+	header .container .menu .menuBox .search .icon,
+	header .container .menu .menuBox .tools .icon {
+		border: none;
+	}
+
+	header .container .menu .menuBox .search a {
+		font-size: 70%;
+	}
+}

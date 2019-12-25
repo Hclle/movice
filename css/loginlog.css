@@ -1,0 +1,21 @@
+/* 表格 */
+.table table {
+	width: 100%;
+	border-collapse: collapse;
+	color: #666;
+	margin-top: 2%;
+	margin-bottom: 5%;
+}
+
+.table table th,
+.table table td {
+	border: 1px solid rgba(50, 50, 50, 0.25);
+}
+
+.table table .thead {
+	color: #333;
+}
+
+.table table td {
+	padding: 1%;
+}
