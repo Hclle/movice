@@ -107,6 +107,9 @@ header .container .tools a .icon path {
 }
 
 /* 移动端菜单 */
+header .container .menu {
+	display: none;
+}
 header .container .menu input:checked+.menuBox {
 	display: block;
 }
@@ -115,7 +118,6 @@ header .container .menu .icon {
 	width: 28px;
 	height: 28px;
 	fill: #666;
-	display: none;
 	border: 1px solid #888;
 	border-radius: 2px;
 }
@@ -179,7 +181,7 @@ footer .footer {
 	}
 
 	/* 菜单 */
-	header .container .menu .icon {
+	header .container .menu {
 		display: block;
 	}
 
